@@ -29,6 +29,7 @@ public class Program {
 
     // Getter for version
     public int getVersion() {
+        // n7 Change 2
         return version;
     }
 
