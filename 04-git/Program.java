@@ -1,3 +1,4 @@
+// n6
 public class Program {
     // Class variables
     private String name;
@@ -19,6 +20,8 @@ public class Program {
         this.name = name;
     }
 
+    // Change 2 True n5
+
     // Getter for version
     public int getVersion() {
         return version;
@@ -28,6 +31,7 @@ public class Program {
     public void setVersion(int version) {
         this.version = version;
     }
+    // Change 3 True n5
 
     // Main method
     public static void main(String[] args) {
