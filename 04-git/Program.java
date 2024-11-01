@@ -21,6 +21,7 @@ public class Program {
 
     // Setter for name
     public void setName(String name) {
+        // n7 Change 3
         this.name = name;
     }
 
