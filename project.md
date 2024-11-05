@@ -50,10 +50,12 @@ Osoba chcąca zakupić produkt na aukcji.
 
 [Sprzedający](#ac1):
 * [UC1](#uc1): Wystawienie produktu na aukcję
-* ...
+* [UC5](#uc5): Przekazanie produktu Kupującemu
 
-[Kupujący](#ac2)
-* ...
+[Kupujący](#ac2):
+* [UC2](#uc2): Oferowanie kwoty za produkt
+* [UC3](#uc3): Wygranie aukcji
+* [UC4](#uc4): Przekazanie należności Sprzedającemu
 
 ---
 <a id="uc1"></a>
@@ -88,6 +90,46 @@ Osoba chcąca zakupić produkt na aukcji.
 
 1.A. ...
 * 4.A.1. ...
+
+---
+
+<a id="uc2"></a>
+### UC2: Oferowanie kwoty za produkt
+
+**Aktorzy:** [Kupujący](#ac2)
+
+**Scenariusz główny:**
+1. [Kupujący](#ac2) oferuje kwotę za produkt wyższą od aktualnie najwyższej oferty.
+
+---
+
+<a id="uc3"></a>
+### UC3: Wygranie aukcji
+
+**Aktorzy:** [Kupujący](#ac2)
+
+**Scenariusz główny:**
+1. [Kupujący](#ac2) wygrywa aukcję.
+
+---
+
+<a id="uc4"></a>
+### UC4: Przekazanie należności Sprzedającemu
+
+**Aktorzy:** [Kupujący](#ac2)
+
+**Scenariusz główny:**
+1. [Kupujący](#ac2) przekazuje należność Sprzedającemu.
+
+---
+
+<a id="uc5"></a>
+### UC5: Przekazanie produktu Kupującemu
+
+**Aktorzy:** [Sprzedający](#ac1)
+
+**Scenariusz główny:**
+1. [Sprzedający](#ac1) przekazuje produkt Kupującemu.
 
 ---
 
