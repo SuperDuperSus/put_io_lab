@@ -99,8 +99,16 @@ Osoba chcąca zakupić produkt na aukcji.
 **Aktorzy:** [Kupujący](#ac2)
 
 **Scenariusz główny:**
-1. [Kupujący](#ac2) oferuje kwotę za produkt wyższą od aktualnie najwyższej oferty.
+1. [Kupujący](#ac2) Wpisze kwote ktora chce zaplacic na [Aukcji](#BO1).
+2. System sprawzdi kwote.
+3. System powisze kwote [Aukcji](#BO1).
+5. System wpisze dany [Kupujący](#ac2) jako najwyszego do [Aukcji](#BO1)
 
+**Scenariusze alternatywne:** 
+
+2.A. Podana kwota jest nisza od 1z albo nisza of ceny oferty
+* 2.A.1. System informuje o blndzie wpisznej ceny.
+* 2.A.2. Prejdz do kroku 1.
 ---
 
 <a id="uc3"></a>
@@ -109,18 +117,33 @@ Osoba chcąca zakupić produkt na aukcji.
 **Aktorzy:** [Kupujący](#ac2)
 
 **Scenariusz główny:**
-1. [Kupujący](#ac2) wygrywa aukcję.
+1. System konczy [Aukcju](#BO1).
+2. System wybiera i zapisze wybranego [Kupującego](#ac2)
+3. System informuje o wybranego [Kupującego](#ac2) i [Sprzedający](#ac1)
+4. System doda do [koszyka](#BO3) [Kupującego](#ac2) [Product](#BO2)
+5. System usune [Aukcju](#BO1)
 
+**Scenariusze alternatywne:** 
+
+2.A. Nikt ni zaplacil za product :(
+* 2.A.1. System inforormuje [Sprzedający](#ac1) ze [Product](#BO2) nie zostal spszedany
+* 2.A.2. Prejdz do kroku 5
 ---
 
 <a id="uc4"></a>
 ### UC4: Przekazanie należności Sprzedającemu
 
-**Aktorzy:** [Kupujący](#ac2)
+**Aktorzy:** [c](#ac2)
 
 **Scenariusz główny:**
-1. [Kupujący](#ac2) przekazuje należność Sprzedającemu.
+1. [Kupujący](#ac2) wpisiwa dane karty platniczej
+2. System sprawdza dane karty platniczej
+3. System prekieruje srodki z karty platniczej [Kupujący](#ac2) na kartu platniczu [Sprzedający](#ac1) [Aukcji](#BO1)
 
+**Scenariusze alternatywne:** 
+
+1.A. ...
+* 4.A.1. ...
 ---
 
 <a id="uc5"></a>
@@ -131,6 +154,10 @@ Osoba chcąca zakupić produkt na aukcji.
 **Scenariusz główny:**
 1. [Sprzedający](#ac1) przekazuje produkt Kupującemu.
 
+**Scenariusze alternatywne:** 
+
+1.A. ...
+* 4.A.1. ...
 ---
 
 ## Obiewkty biznesowe (inaczje obiekty dziedzinowe lub informatycjne)
