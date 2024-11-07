@@ -120,12 +120,12 @@ Osoba chcąca zakupić produkt na aukcji.
 
 **Scenariusz główny:**
 1. [Kupujący](#ac2) wpisuje dane karty płatniczej.
-2. System sprawdza dane karty płatniczej.
+2. System sprawdza dane płatnicze.
 3. System przekierowuje środki.
 
 **Scenariusze alternatywne:** 
 
-2.A. Dane karty płatniczej są nieprawidłowe.
+2.A. Dane płatnicze są nieprawidłowe.
 * 2.A.1. System informuje [Kupującego](#ac2) o błędnych danych.
 * 2.A.2. Przejdź do kroku 1.
 
