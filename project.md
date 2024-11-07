@@ -120,7 +120,7 @@ Osoba chcąca zakupić produkt na aukcji.
 **Aktorzy:** [Kupujący](#ac2)
 
 **Scenariusz główny:**
-1. [Kupujący](#ac2) wpisuje dane karty płatniczej.
+1. [Kupujący](#ac2) wpisuje dane płatnicze.
 2. System sprawdza dane płatnicze.
 3. System przekierowuje środki.
 
