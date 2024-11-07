@@ -97,12 +97,13 @@ Osoba chcąca zakupić produkt na aukcji.
 <a id="uc3"></a>
 ### UC3: Wygranie aukcji
 
-**Aktorzy:** [Kupujący](#ac2)
+**Aktorzy:** [Kupujący](#ac2),[Sprzedający](#ac1)
 
 **Scenariusz główny:**
 1. System kończy [Aukcję](#BO1).
-2. System wybiera i zapisuje najwyższą ofertę złożoną przez [Kupującego](#ac2).
-3. System informuje wybranego [Kupującego](#ac2) i [Sprzedającego](#ac1) o wyniku aukcji.
+2. System wybiera najwyższą ofertę złożoną przez [Kupującego](#ac2).
+3. System wpisuje product [Aukcję](#BO1) do [Kupującego](#ac2).
+4. System informuje wybranego [Kupującego](#ac2) i [Sprzedającego](#ac1) o wyniku aukcji.
 5. System usuwa [Aukcję](#BO1).
 
 **Scenariusze alternatywne:** 
@@ -178,6 +179,6 @@ Aukcję wygrywa ten z [Kupujący](#ac2)ch, który w momencie jej zakończenia (u
 | ------------------------------------------------- | ------ | ------- |
 | UC1: Wystawienie produktu na aukcję               | C,R    | C       |
 | UC2: Oferowanie kwoty za produkt                  | U,R    | R       |
-| UC3: Wygranie aukcji                              | D      | R       |
+| UC3: Wygranie aukcji                              | D      | U       |
 | UC4: Przekazanie należności Sprzedającemu         | -      | R       |
 | UC5: Przekazanie produktu Kupującemu              | -      | D       |
