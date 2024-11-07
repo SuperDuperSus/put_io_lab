@@ -177,7 +177,7 @@ Aukcję wygrywa ten z [Kupujący](#ac2)ch, który w momencie jej zakończenia (u
 | Przypadek użycia                                  | Aukcja | Produkt |
 | ------------------------------------------------- | ------ | ------- |
 | UC1: Wystawienie produktu na aukcję               | C,R    | C       |
-| UC2: Oferowanie kwoty za produkt                  | U      | R       |
-| UC3: Wygranie aukcji                              | U      | R       |
-| UC4: Przekazanie należności Sprzedającemu         | -      | -       |
-| UC5: Przekazanie produktu Kupującemu              | Delete | -       |
+| UC2: Oferowanie kwoty za produkt                  | U,R    | R       |
+| UC3: Wygranie aukcji                              | D      | R       |
+| UC4: Przekazanie należności Sprzedającemu         | -      | R       |
+| UC5: Przekazanie produktu Kupującemu              | -      | D       |
