@@ -76,39 +76,22 @@ Osoba chcąca zakupić produkt na aukcji.
 * 4.A.1. System informuje o błędnie podanych danych.
 * 4.A.2. Przejdź do kroku 2.
 
----
-
-<a id="uc2"></a>
-### UC2: ...
-
-**Aktorzy:** [Sprzedający](#ac1), [Kupujący](#ac2), ...
-
-**Scenariusz główny:**
-1. ...
-
-**Scenariusze alternatywne:** 
-
-1.A. ...
-* 4.A.1. ...
-
----
-
 <a id="uc2"></a>
 ### UC2: Oferowanie kwoty za produkt
 
 **Aktorzy:** [Kupujący](#ac2)
 
 **Scenariusz główny:**
-1. [Kupujący](#ac2) Wpisze kwote ktora chce zaplacic na [Aukcji](#BO1).
-2. System sprawzdi kwote.
-3. System powisze kwote [Aukcji](#BO1).
-5. System wpisze dany [Kupujący](#ac2) jako najwyszego do [Aukcji](#BO1)
+1. [Kupujący](#ac2) wpisuje kwotę, jaką chce zapłacić na [Aukcji](#BO1).
+2. System sprawdza kwotę.
+3. System aktualizuje najwyższą ofertę na [Aukcji](#BO1).
 
 **Scenariusze alternatywne:** 
 
-2.A. Podana kwota jest nisza od 1z albo nisza of ceny oferty
-* 2.A.1. System informuje o blndzie wpisznej ceny.
-* 2.A.2. Prejdz do kroku 1.
+2.A. Podana kwota jest niższa od 1 PLN albo niższa od aktualnej najwyższej oferty.
+* 2.A.1. System informuje o błędnie wpisanej kwocie.
+* 2.A.2. Przejdź do kroku 1.
+
 ---
 
 <a id="uc3"></a>
@@ -117,33 +100,35 @@ Osoba chcąca zakupić produkt na aukcji.
 **Aktorzy:** [Kupujący](#ac2)
 
 **Scenariusz główny:**
-1. System konczy [Aukcju](#BO1).
-2. System wybiera i zapisze wybranego [Kupującego](#ac2)
-3. System informuje o wybranego [Kupującego](#ac2) i [Sprzedający](#ac1)
-4. System doda do [koszyka](#BO3) [Kupującego](#ac2) [Product](#BO2)
-5. System usune [Aukcju](#BO1)
+1. System kończy [Aukcję](#BO1).
+2. System wybiera i zapisuje najwyższą ofertę złożoną przez [Kupującego](#ac2).
+3. System informuje wybranego [Kupującego](#ac2) i [Sprzedającego](#ac1) o wyniku aukcji.
+5. System usuwa [Aukcję](#BO1).
 
 **Scenariusze alternatywne:** 
 
-2.A. Nikt ni zaplacil za product :(
-* 2.A.1. System inforormuje [Sprzedający](#ac1) ze [Product](#BO2) nie zostal spszedany
-* 2.A.2. Prejdz do kroku 5
+2.A. Nikt nie złożył oferty zakupu.
+* 2.A.1. System informuje [Sprzedającego](#ac1), że [Produkt](#BO2) nie został sprzedany.
+* 2.A.2. Przejdź do kroku 5.
+
 ---
 
 <a id="uc4"></a>
 ### UC4: Przekazanie należności Sprzedającemu
 
-**Aktorzy:** [c](#ac2)
+**Aktorzy:** [Kupujący](#ac2)
 
 **Scenariusz główny:**
-1. [Kupujący](#ac2) wpisiwa dane karty platniczej
-2. System sprawdza dane karty platniczej
-3. System prekieruje srodki z karty platniczej [Kupujący](#ac2) na kartu platniczu [Sprzedający](#ac1) [Aukcji](#BO1)
+1. [Kupujący](#ac2) wpisuje dane karty płatniczej.
+2. System sprawdza dane karty płatniczej.
+3. System przekierowuje środki.
 
 **Scenariusze alternatywne:** 
 
-1.A. ...
-* 4.A.1. ...
+2.A. Dane karty płatniczej są nieprawidłowe.
+* 2.A.1. System informuje [Kupującego](#ac2) o błędnych danych.
+* 2.A.2. Przejdź do kroku 1.
+
 ---
 
 <a id="uc5"></a>
@@ -152,12 +137,15 @@ Osoba chcąca zakupić produkt na aukcji.
 **Aktorzy:** [Sprzedający](#ac1)
 
 **Scenariusz główny:**
-1. [Sprzedający](#ac1) przekazuje produkt Kupującemu.
+1. [Sprzedający](#ac1) przekazuje produkt [Kupującemu](#ac2).
 
 **Scenariusze alternatywne:** 
 
-1.A. ...
-* 4.A.1. ...
+1.A. Produkt jest uszkodzony lub niekompletny.
+* 1.A.1. [Kupujący](#ac2) zgłasza problem do systemu.
+* 1.A.2. System informuje [Sprzedającego](#ac1) o problemie.
+* 1.A.3. Przejdź do kroku 1.
+
 ---
 
 ## Obiewkty biznesowe (inaczje obiekty dziedzinowe lub informatycjne)
@@ -186,7 +174,10 @@ Aukcję wygrywa ten z [Kupujący](#ac2)ch, który w momencie jej zakończenia (u
 ## Macierz CRUDL
 
 
-| Przypadek użycia                                  | Aukcja | Produkt | ... |
-| ------------------------------------------------- | ------ | ------- | --- |
-| UC1: Wystawienia produktu na aukcję               |    C   |    C    | ... |
-| ???                                               |  ...   |  ...    | ... |
+| Przypadek użycia                                  | Aukcja | Produkt |
+| ------------------------------------------------- | ------ | ------- |
+| UC1: Wystawienie produktu na aukcję               | C,R    | C       |
+| UC2: Oferowanie kwoty za produkt                  | U      | R       |
+| UC3: Wygranie aukcji                              | U      | R       |
+| UC4: Przekazanie należności Sprzedającemu         | -      | -       |
+| UC5: Przekazanie produktu Kupującemu              | Delete | -       |
