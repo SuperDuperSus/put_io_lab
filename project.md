@@ -102,7 +102,7 @@ Osoba chcąca zakupić produkt na aukcji.
 **Scenariusz główny:**
 1. System kończy [Aukcję](#BO1).
 2. System wybiera najwyższą ofertę złożoną przez [Kupującego](#ac2).
-3. System wpisuje product [Aukcję](#BO1) do [Kupującego](#ac2).
+3. System wpisuje [Product](#BO2) do [Kupującego](#ac2).
 4. System informuje wybranego [Kupującego](#ac2) i [Sprzedającego](#ac1) o wyniku aukcji.
 5. System usuwa [Aukcję](#BO1).
 
