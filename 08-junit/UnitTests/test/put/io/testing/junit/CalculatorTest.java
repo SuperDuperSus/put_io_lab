@@ -33,7 +33,7 @@ class CalculatorTest {
         IllegalArgumentException exception = assertThrows(
                 IllegalArgumentException.class,
                 () -> calculator.addPositiveNumbers(-3, 4),
-                "Metoda powinna rzucić wyjątek IllegalArgumentException, gdy x < 0 lub y > 0"
+                "Metoda powinna rzucić wyjątek IllegalArgumentException, gdy x < 0 lub y < 0"
         );
 
         assertEquals("The arguments must be positive", exception.getMessage());
