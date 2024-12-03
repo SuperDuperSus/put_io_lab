@@ -29,7 +29,7 @@ class CalculatorTest {
     void testAddPositiveNumbers() {
         assertEquals(7, calculator.addPositiveNumbers(3, 4), "Dodawanie 3 + 4 powinno zwrócić 7");
 
-        // Test rzucający wyjątek: x < 0, y < 0
+        // Test rzucający wyjątek: x < 0, y > 0
         IllegalArgumentException exception = assertThrows(
                 IllegalArgumentException.class,
                 () -> calculator.addPositiveNumbers(-3, 4),
