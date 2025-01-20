@@ -31,7 +31,7 @@ public class AccountsLinearScriptAT {
     @Test
     public void successfulUserRegistration() throws Exception {
         driver.get("http://localhost:8080/accounts/controller?action=db_reset");
-        driver.manage().window().setSize(new Dimension(974, 1032));
+        driver.manage().window().setSize(new Dimension(600, 890));
         driver.findElement(By.cssSelector("html")).click();
         driver.findElement(By.cssSelector("html")).click();
 
