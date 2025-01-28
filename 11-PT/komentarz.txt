@@ -1,0 +1,15 @@
+z1
+srd. czas odp.: ~2s
+przepustowość: 1,4/s
+zmienna averageSpendnings:zeby nie wywolywac kilka razy averageSpendings()
+
+po:
+srd. czas odp: ~0,7s
+przepustowość: 1,6/s
+
+z2
+srednia przepustowość: 2/s = 120/min
+
+need tp have 334kart/m => +drukarek 30
+
+srednia przepustowość 30 drukarek: 5.9/s = 354/min
